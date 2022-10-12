@@ -20,11 +20,33 @@ export default {
 
 export const Default: StoryObj<TextProps> = {};
 
-export const Small: StoryObj<TextProps> = { args: { size: "sm" } };
+export const Small: StoryObj<TextProps> = {
+  args: {
+    size: "sm",
+  },
+};
 
-export const Large: StoryObj<TextProps> = { args: { size: "lg" } };
+export const Large: StoryObj<TextProps> = {
+  args: {
+    size: "lg",
+  },
+};
 
 export const CustomComponent: StoryObj<TextProps> = {
-  args: { asChild: true, children: <p>Lorem ipsum</p> },
-  argTypes: { children: { table: { disable: true } } },
+  args: {
+    asChild: true,
+    children: <p>Text with p tag</p>,
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
