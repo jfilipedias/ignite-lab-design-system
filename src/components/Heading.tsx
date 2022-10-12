@@ -9,10 +9,10 @@ export interface HeadingProps {
 }
 
 export function Heading({ size = "md", asChild, children }: HeadingProps) {
-  const Wrapper = asChild ? Slot : "h2";
+  const Component = asChild ? Slot : "h2";
 
   return (
-    <Wrapper
+    <Component
       className={clsx("text-gray-100 font-sans font-bold", {
         "text-lg": size === "sm",
         "text-xl": size === "md",
@@ -20,6 +20,6 @@ export function Heading({ size = "md", asChild, children }: HeadingProps) {
       })}
     >
       {children}
-    </Wrapper>
+    </Component>
   );
 }

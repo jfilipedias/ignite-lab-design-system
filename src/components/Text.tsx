@@ -9,10 +9,10 @@ export interface TextProps {
 }
 
 export function Text({ size = "md", asChild, children }: TextProps) {
-  const Wrapper = asChild ? Slot : "span";
+  const Component = asChild ? Slot : "span";
 
   return (
-    <Wrapper
+    <Component
       className={clsx("text-gray-100 font-sans", {
         "text-xs": size === "sm",
         "text-sm": size === "md",
@@ -20,6 +20,6 @@ export function Text({ size = "md", asChild, children }: TextProps) {
       })}
     >
       {children}
-    </Wrapper>
+    </Component>
   );
 }
